@@ -1,0 +1,103 @@
+<!-- Standard HTML heading -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title -->
+    <title>Runner Game</title>
+    <!-- Stylesheets load -->
+    <link rel="stylesheet" href="../style/runnerstyle.css">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <main>
+        <!-- Score section for current score and highest score  -->
+        <section id = "score">
+            <div>
+                <h1>Score: </h1>
+                <p>0</p>
+            </div>
+
+            <div>
+                <h1>Highest Score:</h1>
+                <p id="stored_score">0</p>
+            </div>
+        </section>
+
+        <!-- Game's interface section -->
+        <section id="runner_game">
+            <!-- Carrot -->
+            <div id="runner"></div>
+            
+            <!--Obstacles -->
+            <div id="obstacle"></div>
+        </section>
+
+        <!-- Options to start and mute game -->
+        <section id = "options">
+            <a href="#" onclick="start_game()"><i class="fa-solid fa-play"></i></a>
+            <a href="#" onclick="mute()"><i  id="mute_icon" class="fa-solid fa-volume-high"></i></a>
+        </section>
+
+        <!-- Games info section -->
+        <section id="rules">
+            <!-- Description section-->
+            <div>
+                <h1>Description: </h1>
+                <p>Help the carrot navigate through the kitchen and avoid obstacles being thrown its way!</p>
+            </div>
+
+            <!-- How to play the game section-->
+            <div>
+                <h1>How To Play: </h1>
+                <p>Press the Play button (next to the Mute option) located just below the game interface to start.</p>
+                <p><strong>Desktop: </strong>Press any key to jump.</p>
+                <p><strong>Moblie/Tablet: </strong>Tap anywhere on the screen to jump.</p>
+            </div>
+
+            <!-- About game section -->
+            <div>
+                <h1>About Game:</h1>
+                <p><strong>Developer: </strong>Devin Vivas</p>
+                <p><strong>Released Date: </strong>May 2, 2025</p>
+                <p><strong>Technology Used: </strong>HTML5, CSS, JavaScript</p>
+                <p><strong>Platform: </strong>Web Browser</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer section -->
+    <footer class="flex">
+        <!-- Quick links to the website -->
+        <div>
+            <p>Quick Links Here</p>
+            <ul>
+                <li><a href="#about_me">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+        </div>
+
+        <!-- Social Media links -->
+        <div>
+            <p>Connect with me!</p>
+            <ul class="flex">
+                <li><a href="https://www.linkedin.com/in/devin-vivas" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+                <li><a href="https://github.com/Devtheprogrammer-maker" target="_blank"><i class="fa-brands fa-github"></i></a></li>
+                
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Copyright section -->
+    <section id="copyright">
+        <p>&copy; 2025 Devin.tech. All rights reserved.</p>
+    </section>
+</body>
+<!-- Script loads -->
+<script src="../java/runnergame.js"></script>
+</html>

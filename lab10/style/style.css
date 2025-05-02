@@ -1,0 +1,464 @@
+/* Removes defaults */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Body format */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    background-color: #fff;
+    line-height: 1.6;
+}
+
+/* Style the main section heading */
+h1 { 
+    text-align: center;
+    padding-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 2.5rem; 
+    color: #2c3e50;
+}
+
+/* Style headings inside boxes */
+h2 { 
+    text-align: left; 
+    color: #2c3e50; 
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    padding-top: 0;
+}
+
+/* Styles paragraph tag inside boxes */
+p {
+    padding: 0;
+    margin-bottom: 1rem;
+    line-height: 1.7;
+}
+
+/* Format for the line below headings */
+.rectangle {
+    width: 90px;
+    height: 3px;
+    background-color: #3498db;
+    margin: 0 auto 2.5rem auto;
+    border-radius: 4px;
+}
+
+/* Aligns items */
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 2rem; 
+}
+
+/* Styles the 'box' of the items */
+.box {
+    width: 320px;
+    min-height: 250px; 
+    padding: 1.5rem; 
+    background-color: #ffffff;
+    box-shadow: 5px 10px 5px #888888;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    color: #333; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 4px solid #2c3e50;
+}
+
+/* On hovering it lifts the box and reduces the shadow */
+.box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Makes the nav bar stay at the top of the page */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: #2c3e50; /*2c4d7a 87CEEB*/
+    width: 100%;
+}
+  
+/* Unordered list styling */
+nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    list-style: none;
+    margin: 0 auto;
+    padding: 1rem 0.5rem;
+}
+
+/* styles the nav a tags */
+nav a{
+    padding: 0px 25px;
+    color: black;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #c6c3c3;
+}
+
+/* Styles the li lag in the nav section */
+nav li {
+    margin: 0.5rem 0; 
+}
+
+/* Hovers styling for li */
+nav li:hover{
+    background-color: #3498db;
+    border-radius: 8px;
+}
+
+/* Styles the icons */
+nav i{
+    color: #c6c3c3;
+    margin: 0 0.5rem;
+}
+
+
+/* Welcome section styling mainly the background */
+#welcome{
+    height: 90dvh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-image: url(../img/home.png);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    color: #333;
+}
+
+/* Centers welcome contents */
+#center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Animates the h1 to fade in and out */
+#welcome h1 {
+    animation: fade 6s ease-out 2;
+}
+
+/* Makes h1 fade in and out */
+@keyframes fade {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Styles the p of the welcome section */
+#welcome p{
+    padding: 0;
+    border-right: 3px solid #333;
+    display: inline-block;
+    animation: blink_line 0.5s step-end infinite;
+}
+
+/* Make the border 'blink' */
+@keyframes blink_line {
+    50% {border-color: transparent;}
+
+}
+
+/* Make the a tag look like a button */
+#welcome a{
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.6rem 1.5rem;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Lifts the a tag when hovered */
+#welcome a:hover {
+    background-color: #555;
+    transform: translateY(-3px);
+}
+
+/* Animates the icon */
+#welcome i{
+    margin: 2rem 0;
+    font-size: 1.5rem;
+    animation: down 3s ease-in-out infinite;
+}
+
+/* Makes the icon go down and up */
+@keyframes down {
+    0%{
+        transform: translateY(0); 
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(100px); 
+        opacity: 0.7; 
+    }
+    100% {
+        transform: translateY(0); 
+        opacity: 1;
+    }
+}
+
+
+/* About me backgorund and padding styling */
+#about_me {
+    background-color: #eee;
+    padding: 3rem 1rem; 
+}
+
+/* Style the hobby list */
+.hobby_list {
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+}
+
+/* positions the list */
+.hobby_list li {
+    margin-bottom: 0.8rem; 
+    display: flex; 
+    align-items: center; 
+    font-size: 1.05rem;
+}
+
+/* Styles the icon form font awsome */
+.hobby_list li i {
+    color: #3498db; 
+    margin-right: 0.8rem; 
+    width: 20px; 
+    text-align: center;
+}
+
+/* Styles the image */
+.round_img img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 1.5rem; 
+    border: 5px solid #fff; 
+    box-shadow: 5px 10px 5px #888888;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;    
+}
+
+/* On hovering it lifts the img and reduces the shadow */
+.round_img img:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Sets project section background */
+#projects {
+    background-color: #f4f7f6;
+}
+
+/* Styles the images */
+#projects img{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    margin-bottom: 0.25rem; 
+    border-radius: 8px;
+}
+
+/* styles the a tag and centers it */
+#projects a{
+    display: flex; 
+    justify-content: center;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+   
+}
+
+/* Changes the text color */
+#projects a:hover{
+    color: #3498db;
+}
+
+
+/* Styles the contact section */
+#contact {
+    padding: 1.5rem;
+    background-color: #eee;
+}
+
+/* Styles the p tag */
+#contact p{
+    margin: 0 0 0.15rem 0;
+    font-weight: bold;
+}
+
+/* Changes a color */
+#contact a{
+    color: #333;
+}
+
+
+/* Styles footer */
+footer {
+    background-color: #2c3e50;
+    color: #c6c3c3;
+    width: 100%;
+    padding: 2rem 0;
+    margin-top: auto;
+    text-align: center;
+}
+
+/* Styles the ul */
+footer ul{
+    list-style: none;
+}
+
+/* Adds padding to li */
+footer li {
+    padding: 5px 0;
+}
+
+/* changes color */
+footer a:hover{
+    color: #3498db;
+}
+
+/* styles a tag */
+footer a{
+    text-decoration: none;
+    color: #c6c3c3;
+}
+
+
+/* Styles the copyright section */
+#copyright {
+    width: 100%;
+    background-color: #eee;
+    text-align: right;
+    
+}
+
+/* Styles the p */
+#copyright p{
+    margin: 0;
+    padding: 5px 0;
+}
+
+
+
+/* This is for the games */
+/* Styles button */
+button {
+    padding: 0.6rem 1.5rem;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Adds hover effect to button */
+button:hover{
+    background-color: #555;
+    transform: translateY(-3px);
+}
+
+
+/*Score background section styling*/
+#score {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 600px;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+    background-color: #eee;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 5px 10px 18px #888888;
+    text-align: center;
+}
+
+/* Adds space */
+#score div{
+    margin-bottom: 0.5rem;
+}
+
+/*Formats h1 tag*/
+#score h1{
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+/*Formats p tag*/
+#score p{
+    color: #2c4d7a; 
+    font-weight: bold;
+}
+
+
+/*Rules background format*/
+#rules {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    max-width: 1000px;
+    gap: 1rem;
+}
+
+/*Formats div tag*/
+#rules div{
+    padding: 1.5rem;
+    flex: 1;
+    background-color: #eee;
+    box-shadow: 5px 10px 18px #888888;
+    border-radius: 8px;
+    min-height: 200px;
+}
+
+/*Formats p tag*/
+#rules p{
+    font-weight: bold;
+}
+
+/*Formats h1 tag*/
+#rules h1 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+
+/*Formats stong tag*/
+#rules strong{
+    color: #2c4d7a;
+    /*Possible other color = 007bff*/
+}
